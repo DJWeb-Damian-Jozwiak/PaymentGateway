@@ -1,0 +1,9 @@
+parameters:
+    level: 8
+    paths:
+        - src
+
+    treatPhpDocTypesAsCertain: false
+
+includes:
+    - vendor/phpstan/phpstan-mockery/extension.neon
