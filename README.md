@@ -282,10 +282,6 @@ flowchart TD
     E -- Nie --> S4[OSSInvoiceStrategy<br/>/iapi/fakturaoss.json<br/>VAT: wg kraju konsumenta]
 
     D -- Nie --> S5[ExportInvoiceStrategy<br/>/iapi/fakturaeksportuslug.json<br/>VAT: poza terytorium PL]
-
-    %% Legend
-    classDef strat fill:#e7f5ff,stroke:#4dabf7,stroke-width:1px;
-    class S1,S2,S3,S4,S5 strat;
 ```
 ### Custom Strategy Example
 
