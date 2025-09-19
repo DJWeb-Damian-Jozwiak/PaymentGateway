@@ -269,7 +269,6 @@ The system automatically selects the appropriate strategy based on customer data
 | **OSS** | EU consumer | Customer's country VAT | `/fakturaoss.json` |
 | **Export** | Non-EU customer | 0% | `/fakturaeksportuslug.json` |
 
-<pre>
 ```mermaid
 flowchart TD
     A[InvoiceData] --> B{Country = PL?}
@@ -287,7 +286,7 @@ flowchart TD
     %% Legend
     classDef strat fill:#e7f5ff,stroke:#4dabf7,stroke-width:1px;
     class S1,S2,S3,S4,S5 strat;
-```</pre>
+```
 ### Custom Strategy Example
 
 ```php
