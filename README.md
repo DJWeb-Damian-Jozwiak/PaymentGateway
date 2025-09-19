@@ -278,7 +278,7 @@ flowchart TD
 
     B -- Nie --> D{EU country?}
     D -- Tak --> E{B2B z VAT nr?}
-    E -- Tak --> S3[EUB2BInvoiceStrategy<br/>/iapi/fakturaeksportuslugue.json<br/>VAT: 0% reverse charge (art. 28b)]
+    E -- Tak --> S3[EUB2BInvoiceStrategy<br/>/iapi/fakturaeksportuslugue.json<br/>VAT: 0 reverse charge (art. 28b)]
     E -- Nie --> S4[OSSInvoiceStrategy<br/>/iapi/fakturaoss.json<br/>VAT: wg kraju konsumenta]
 
     D -- Nie --> S5[ExportInvoiceStrategy<br/>/iapi/fakturaeksportuslug.json<br/>VAT: poza terytorium PL]
