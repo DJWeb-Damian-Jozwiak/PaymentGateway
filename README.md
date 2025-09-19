@@ -269,20 +269,6 @@ The system automatically selects the appropriate strategy based on customer data
 | **OSS** | EU consumer | Customer's country VAT | `/fakturaoss.json` |
 | **Export** | Non-EU customer | 0% | `/fakturaeksportuslug.json` |
 
-```mermaid
-flowchart TD
-    A[InvoiceData] --> B{Country = PL?}
-    B -- Tak --> C{Currency = PLN?}
-    C -- Tak --> S1[DomesticInvoiceStrategy<br/>/iapi/fakturakraj.json<br/>VAT: PL stawka]
-    C -- Nie --> S2[CurrencyInvoiceStrategy<br/>/iapi/fakturawaluta.json<br/>VAT: PL stawka]
-
-    B -- Nie --> D{EU country?}
-    D -- Tak --> E{B2B z VAT nr?}
-    E -- Tak --> S3[EUB2BInvoiceStrategy<br/>/iapi/fakturaeksportuslugue.json<br/>VAT: 0 reverse charge (art. 28b)]
-    E -- Nie --> S4[OSSInvoiceStrategy<br/>/iapi/fakturaoss.json<br/>VAT: wg kraju konsumenta]
-
-    D -- Nie --> S5[ExportInvoiceStrategy<br/>/iapi/fakturaeksportuslug.json<br/>VAT: poza terytorium PL]
-```
 ### Custom Strategy Example
 
 ```php
